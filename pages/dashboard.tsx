@@ -6,11 +6,6 @@ import { api } from "../services/api";
 const Dashboard: NextPage = () =>{
     const { user } = useContext(AuthContext);
 
-    useEffect(()=>{
-        api.get('/me')
-        .then(res => console.log(res))
-        .catch(err => console.log(err));
-    }, []);
     return(
         <div>E-mail: {user?.email} </div>
     )
